@@ -7,6 +7,7 @@
 - Componenti:
 
   - SinglePokemon
+    - state: no
     - props:
       - prendiDalFiglio => funzione che setta l'url nello state di PokemonList
       - pokeData => oggetto con nome del pokemon e URL
@@ -16,7 +17,14 @@
     - metodi: 
         - portaAGenitore => funzione che chiama prendiDalFiglio
   - PokemonList
-    - componentDidMount => fetch
+    - state: 
+        - pokemon => array dalla fetch, inizialmente vuoto
+        - selected => url del pokemon selezionato, inizialmente per il primo pokemon del database
+    - props: 
+        - prendiUrl => funzione che setta l'url nello state di App.js
+    - metodi: 
+        - componentDidMount => fetch
+        - componentDidUpdate => chiama la prop prendiUrl con l'url selezionata come paramentro
   - PokemonDetails
 
 - Struttura
