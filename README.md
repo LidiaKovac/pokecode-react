@@ -98,7 +98,7 @@
       }
       ],
       "weight":1000
-    }
+      }
            ```
     - metodi:
     - props:
