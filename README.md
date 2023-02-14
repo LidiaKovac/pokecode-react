@@ -27,7 +27,7 @@
       - componentDidUpdate => chiama la prop prendiUrl con l'url selezionata come paramentro
   - PokemonDetails
     - state:
-      single => oggetto che rappresenta un pokemon singolo:
+      - single => oggetto che rappresenta un pokemon singolo, preso dalla fetch:
       ```jsonc
       {
         "abilities":[
@@ -101,7 +101,12 @@
       }
            ```
     - metodi:
+      - fetchSinglePokemon => chiamato onMount e onUpdate, fetcha il pokemon basandosi sulla prop pokemonSelezionato e lo setta nello state
+      - componentDidMount
+      - componentDidUpdate
+       - entrambi chiamano fetchSinglePokemon
     - props:
+      - pokemonSelezionato => viene da App.js, e' l'url del pokemon che abbiamo cliccato
 
 - Struttura
   - App.js
