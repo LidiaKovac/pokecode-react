@@ -1,0 +1,14 @@
+@import "/src/style/mixins";
+.list-group-item {
+    * {
+        @include first-letter-upper;
+    }
+    &.selected, &:hover {
+        background-color: rgb(255, 0, 0, 0.3);
+        font-weight: bold;
+    }
+    svg {
+        width: 90%;
+        height: auto;
+    }
+}
