@@ -1,0 +1,14 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./colors";
+@import "./mixins";
+@import "./navbar";
+@import "./pagination";
+@import "./card";
+
+h5 {
+    @include first-letter-upper
+}
+
+#p-gen {
+    @include first-letter-upper
+}

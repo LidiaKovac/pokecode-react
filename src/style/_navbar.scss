@@ -1,0 +1,16 @@
+nav.navbar {
+
+    font-weight: bold;
+
+
+
+
+    .nav-link:nth-of-type(odd) {
+        color: black !important
+    }
+
+    .nav-link:nth-of-type(even) {
+        color: white !important
+    }
+
+}

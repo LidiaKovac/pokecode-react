@@ -1,0 +1,12 @@
+.pagination {
+    .page-link {
+        color: black;
+        font-weight: bold;
+
+        &.active {
+            background-color: $pkmn-red;
+            border-color: $pkmn-red;
+            color: white
+        }
+    }
+}
