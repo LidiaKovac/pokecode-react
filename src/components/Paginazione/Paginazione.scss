@@ -1,0 +1,19 @@
+.pagination {
+  a.page-link:has(input) {
+    padding: 0px;
+    height: 100%;
+  }
+  input {
+    margin: 0px;
+    height: 100%;
+    width: 60px;
+    text-align: center;
+    padding: 0px;
+    border: none;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

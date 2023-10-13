@@ -1,33 +1,33 @@
 @import "/src/style/colors";
 @import "/src/style/mixins";
 
-.card {
-  margin-bottom: 10px;
+// .card {
+//   margin-bottom: 10px;
 
-  .abilities {
-    background-color: transparent;
-    border: none;
-    padding: 0px;
-    margin-bottom: 20px;
-    .single-ab {
-      list-style: none;
-      color: black;
-      text-transform: capitalize;
-      svg {
-        color: $pkmn-red;
-      }
-    }
-  }
-  button {
-    background-color: transparent;
-    border: none;
-    color: black;
-    font-weight: bold;
-    text-decoration: underline $pkmn-red;
-    text-transform: inherit;
-    &:disabled {
-      background-color: rgb(255, 0, 0, 0.4);
-      color: rgb(0, 0, 0, 0.5);
-    }
-  }
-}
+//   .abilities {
+//     background-color: transparent;
+//     border: none;
+//     padding: 0px;
+//     margin-bottom: 20px;
+//     .single-ab {
+//       list-style: none;
+//       color: black;
+//       text-transform: capitalize;
+//       svg {
+//         color: $pkmn-red;
+//       }
+//     }
+//   }
+//   button {
+//     background-color: transparent;
+//     border: none;
+//     color: black;
+//     font-weight: bold;
+//     text-decoration: underline $pkmn-red;
+//     text-transform: inherit;
+//     &:disabled {
+//       background-color: rgb(255, 0, 0, 0.4);
+//       color: rgb(0, 0, 0, 0.5);
+//     }
+//   }
+// }

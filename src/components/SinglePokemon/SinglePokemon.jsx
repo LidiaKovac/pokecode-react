@@ -1,31 +1,53 @@
-import { Component } from "react"
-import { ListGroup, Row, Col } from "react-bootstrap"
+import { Component, useEffect, useState } from "react"
+import { Card, Button, Col } from "react-bootstrap"
 import { MdCatchingPokemon } from "react-icons/md"
-import "./SinglePokemon.scss"
+import { HiOutlineSparkles } from "react-icons/hi"
+import styles from "./SinglePokemon.module.scss"
 
-class SinglePokemon extends Component {
-  state = {
-    selected: false,
-  }
-  portaAGenitore(urlDelPokemon) {
+export const SinglePokemon = (props) => {
+  const [hovered, setIsHovered] = useState(false)
+ 
+  const portaAGenitore = (urlDelPokemon) => {
     console.log(urlDelPokemon)
-    this.props.prendiDalFiglio(urlDelPokemon /* ☺ */)
+    props.prendiDalFiglio(urlDelPokemon /* ☺ */)
   }
-  render() {
-    return (
-      <ListGroup.Item
-        className={this.props.selected ? "selected" : ""}
-        onClick={() => {
-          this.portaAGenitore(this.props.pokeData.url)
-        }}
-      >
-        <Row className="justify-content-between">
-          <Col>{this.props.pokeData.name}</Col>
-          <Col xs={1}>{this.props.selected && <MdCatchingPokemon />}</Col>
-        </Row>
-      </ListGroup.Item>
-    )
-  }
+
+
+  return (
+    <Col
+      xl={3}
+      lg={4}
+      md={6}
+      sm={12}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="g-2"
+      onClick={() => {
+        portaAGenitore(props.pkmn)
+      }}
+    >
+      <Card className={props.selected ? styles.selected : ""}>
+        <Card.Img
+          variant="top"
+          src={
+            // props.pkmn.sprites?.other["official-artwork"][
+            //   hovered  ? "front_shiny" : "front_default"
+            // ]
+            props.pkmn.sprites?.other["official-artwork"]["front_default"]
+          }
+        />
+
+        <Card.Body>
+          <Card.Title> {props.pkmn.name}</Card.Title>
+          {(props.selected || hovered) && (
+            <span className={styles.sparkles}>
+              <HiOutlineSparkles />
+            </span>
+          )}
+        </Card.Body>
+      </Card>
+    </Col>
+  )
 }
 
 export default SinglePokemon
